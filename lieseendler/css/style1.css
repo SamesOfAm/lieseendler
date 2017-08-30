@@ -1,0 +1,50 @@
+body {
+  margin-bottom: 15px;
+  background-color: black;
+}
+
+section {
+    border: 7px solid black;
+    width: 1164px;
+    border-bottom: 10px solid black;
+    margin: 10px auto;
+}
+
+.row {
+	margin-left: 0;
+}
+
+.gif {
+    float: left;
+    display: none;
+    width: 50px;
+    border: 2px solid black;
+}
+
+.gif.default {
+  display: block;
+}
+
+.form-control {
+	width: 20%;
+	float: left;
+	height: 26px;
+}
+
+.form-group {
+
+}
+
+.btn-primary {
+	background-color: #777c81;
+	border-color: #000;
+	float: left;
+	line-height: 1;
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+.btn-primary:hover {
+	background-color: #A4A4A4;
+	border-color: #000;
+}

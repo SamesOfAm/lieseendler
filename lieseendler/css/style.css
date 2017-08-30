@@ -1,0 +1,419 @@
+/* @font-face {
+  font-family: 'dejavu_sansbook';
+  src: url('http://www.lieseendler.com/DejaVuSans-webfont.eot');
+  src: url('http://www.lieseendler.com/DejaVuSans-webfont.eot?iefix') format('embedded-opentype'),
+  url('http://www.lieseendler.com/DejaVuSans-webfont.woff') format('woff'),
+  url('http://www.lieseendler.com/DejaVuSans-webfont.ttf') format('truetype'),
+  url('http://www.lieseendler.com/DejaVuSans-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inconsolata", monospace;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  /* background: #e6edf8; */
+}
+
+.h1 {
+    font-family: "Inconsolata", monospace;
+    background-color: white;
+    font-weight: 100;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    padding: 7px 0;
+  }
+
+h1 > a {
+  color: black;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.teaser {
+  position: relative;
+  margin-top: 4%;
+}
+
+#main-toggle:hover  ~ div {
+  top: +67px;
+}
+
+.menu {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-works {
+  border-right: 1px solid #676767;
+  padding-right: 8px;
+}
+
+.menu-vita {
+  padding-left: 7px;
+  border-right: 1px solid #676767;
+  padding-right: 8px;
+}
+
+.menu-contact {
+  padding-left: 7px;
+  border-right: 1px solid #676767;
+  padding-right: 8px;
+}
+
+.menu-links {
+  padding-left: 7px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  -webkit-transition: color: 0.3s;
+}
+
+h2 > a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  -webkit-transition: color: 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #BDBDBD;
+}
+
+a:focus {
+  text-decoration: none;
+  color: #BDBDBD;
+  outline: none;
+}
+
+.works {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 45px;
+  width: 85%;
+}
+
+.sample {
+    position: relative;
+    float: right;
+    margin-bottom: 30px;
+    margin-right: 24.5%;
+    width: 50%;
+}
+
+.sample:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.sample:hover:after {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.sample > img {
+    width: 100%;
+}
+
+.sample,.text  {
+  margin-top: 70px;
+}
+
+.text {
+  padding-left: 2%;
+  margin-right: 2.5%;
+  float: right;
+  width: 22%;
+  text-align: right;
+}
+
+.sample-2,.text-2 {
+  margin-top: 50px;
+}
+
+.sample-2 {
+
+  width: 65%;
+  float: right;
+}
+
+.sample-2 > a > img {
+  width: 100%;
+}
+
+.text-2 {
+  padding-left: 2%;
+  margin-right: 6%;
+  float: right;
+  width: 22%;
+  text-align: justify;
+}
+
+.text > h2 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ol li {
+	margin: 3px;
+	float: left;
+}
+
+.content {
+    position: relative;
+    margin: 0 auto;
+    min-width: 1000px;
+}
+
+.left {
+  margin: 6% 0 0 2%;
+  width: 24%;
+  float: left;
+  position: relative;
+  left:0px;
+}
+
+.left ol li {
+  border: white dashed 2px;
+  border-radius: 5px;
+  width: 25%;
+}
+
+.right {
+  margin: 6% 0 0 4.5%;
+  position: absolute;
+  right: 0px;
+  width: 70%;
+  padding-left: 3%;
+}
+
+.right ol {
+  width: 100%;
+}
+
+.right ol li {
+  border: #666 dashed 2px;
+  border-radius: 5px;
+  width: 8.5%;
+  position: relative;
+}
+
+ol li > img {
+  width:100%;
+  float: left;
+  z-index: -1;
+}
+
+.left .trash {
+  display: none;
+}
+
+.trash {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.right li:hover > span.trash {
+  display: block;
+  color: #fff;
+  z-index: 1;
+}
+
+.buttons label {
+  float: left;
+  font-size: 14px;
+  cursor: pointer;
+  width: 3%;
+  position: absolute;
+  top: 47%;
+  right: 0px;
+}
+
+input {
+  display: none;
+}
+
+#toggle:checked ~ label span#hide {
+  display: none;
+}
+
+#toggle:checked ~ label span#show {
+  display: block;
+}
+
+label span#show {
+  display: none;
+}
+
+#toggle:checked  ~ ol {
+  left: -500px;
+}
+
+.left ol {
+  position: relative;
+  left: 0;
+  transition: left 0.2s;
+}
+
+label {
+  position: absolute;
+  top: 47%;
+  right: 0;
+  cursor: pointer;
+}
+
+
+#unhide {
+  display: none;
+}
+
+.unhide,.hide {
+  font-size: 30px;
+}
+
+.clear {
+  position: absolute;
+  top: 47.35%;
+  left: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.detail-teaser,.detail-body {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.detail-teaser {
+  margin-top: 35px;
+  position: relative;
+}
+
+.trouble-teaser:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.trouble-teaser:hover:after {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.detail-teaser > img {
+  width: 100%;
+}
+
+.detail-teaser-group {
+  margin-bottom: 100px;
+}
+
+.detail-teaser-small > img {
+  width: 40%;
+  float: left;
+  margin-left: 4%;
+}
+
+.detail-body {
+  width: 60%;
+  text-align: justify;
+}
+
+.detail-frame {
+  text-align: justify;
+}
+
+.detail-frame-right {
+  text-align: right;
+}
+
+.detail-frame > div > h1 {
+  text-align: right;
+}
+
+.body-text {
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+
+.body-text-continue {
+  margin: 25px 0 0 0;
+}
+
+.detail-body > div > h1 {
+  color: white;
+  font-family: "Inconsolata", monospace;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 0;
+  margin-top: 40px;
+  margin-bottom: 3px;
+  padding-top: 0;
+}
+
+.detail-body > div > div > h1 {
+  color: white;
+  font-family: "Inconsolata", monospace;
+  font-size: 20px;
+  padding-left: 0;
+  margin-top: 40px;
+  margin-bottom: 3px;
+  padding-top: 0;
+}
+
+.vimeo {
+  margin-top: 40px;
+}
+
+#vita {
+  width: 80%;
+  margin-bottom: 80px;
+}
+
+#vita td {
+  vertical-align: top;
+}
+
+#vita .td-left {
+  width: 32%;
+}
+
+#vita .last {
+  padding-bottom: 20px;
+}
