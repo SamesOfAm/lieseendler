@@ -30,8 +30,18 @@
 		<div class="detail-body">
 			<div class="detail-frame">
 				<div class="body-text">
-					<h1 style="text-align: center">Contact</h1>
-					<p style="text-align: center">liese.endler [ at ] gmx.de</p>
+					<h1 style="text-align: center">Inspiration</h1>
+					<p style="text-align: center">Here I gather things that inspire my work.</p>
+                    <?php
+                        $request_url = "http://halfwayshorn.tumblr.com/api/read";
+                        $xml = simplexml_load_file($request_url);
+                        $numberPosts = $xml->posts
+                        $text = $xml->posts->post->{'photo-caption'};
+                        $image = $xml->posts->post->{'photo-url'};
+                        echo '<p>'.$text.'</p>';
+                        echo '<img src="'.$image.'" style="width:400px;">';
+                        echo "…";
+                    ?>
 				</div>
 			</div>
 		</div>
