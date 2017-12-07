@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Liese Endler</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
 			<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet"> 
             <link type ='text/css' rel='stylesheet' href='../css/bootstrap.min.css'>
 			<link rel="icon" type="image/ico" href="../assets/img/favicon3.ico">

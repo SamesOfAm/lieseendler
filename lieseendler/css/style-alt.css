@@ -9,13 +9,20 @@
   font-style: normal;
 } */
 
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Inconsolata", monospace;
   color: #3a00f8;
-  background-color: #fedece; 
+  background-color: #fedece; /* rgba(153,255,204,1); */
   font-size: 14px;
+  /* background: #e6edf8; */
+}
+
+.content {
+    position: relative;
+    margin: 0 auto;
 }
 
 .h1 {
@@ -31,11 +38,25 @@ h1 > a {
   color: #ffece3;
 }
 
+h2 {
+  margin-top: 0;
+}
+
+.teaser {
+  position: relative;
+  margin-top: 4%;
+}
+
+#main-toggle:hover  ~ div {
+  top: +67px;
+}
+
 .menu {
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 75px;
+  position: absolute;
+  width: 195px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .menu-option {
@@ -46,18 +67,6 @@ h1 > a {
 .menu-option:last-child {
   padding-right: 0;
   border-right: none;
-}
-
-h2 {
-  margin-top: 0;
-}
-
-.teaser {
-  margin-top: 4%;
-}
-
-#main-toggle:hover  ~ div {
-  top: +67px;
 }
 
 a {
@@ -89,8 +98,23 @@ a:focus {
   outline: none;
 }
 
+.works {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 45px;
+  width: 85%;
+}
+
 .sample {
-    margin-bottom: 50px;
+    position: relative;
+    float: right;
+    margin-bottom: 30px;
+    margin-right: 24.5%;
+    width: 50%;
+}
+
+.sample:last-child {
+    margin-bottom: 100px;
 }
 
 .sample > img {
@@ -101,12 +125,19 @@ a:focus {
     outline: 13px solid #3a00f8;
 }
 
+.sample,.text  {
+  margin-top: 70px;
+}
+
 .sample-classification {
   color: #3a00f8;
-  text-align: right;
 }
 
 .text {
+  padding-left: 2%;
+  margin-right: 2.5%;
+  float: right;
+  width: 22%;
   text-align: right;
 }
 
@@ -114,13 +145,150 @@ a:focus {
   margin-top: 50px;
 }
 
+.sample-2 {
+
+  width: 65%;
+  float: right;
+}
+
+.sample-2 > a > img {
+  width: 100%;
+}
+
 .text-2 {
+  padding-left: 2%;
+  margin-right: 6%;
+  float: right;
+  width: 22%;
   text-align: justify;
 }
 
 .text > h2 {
   font-size: 17px;
   font-weight: bold;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ol li {
+	margin: 3px;
+	float: left;
+}
+
+.left {
+  margin: 6% 0 0 2%;
+  width: 24%;
+  float: left;
+  position: relative;
+  left:0px;
+}
+
+.left ol li {
+  border: white dashed 2px;
+  border-radius: 5px;
+  width: 25%;
+}
+
+.right {
+  margin: 6% 0 0 4.5%;
+  position: absolute;
+  right: 0px;
+  width: 70%;
+  padding-left: 3%;
+}
+
+.right ol {
+  width: 100%;
+}
+
+.right ol li {
+  border: #666 dashed 2px;
+  border-radius: 5px;
+  width: 8.5%;
+  position: relative;
+}
+
+ol li > img {
+  width:100%;
+  float: left;
+  z-index: -1;
+}
+
+.left .trash {
+  display: none;
+}
+
+.trash {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.right li:hover > span.trash {
+  display: block;
+  color: #fff;
+  z-index: 1;
+}
+
+.buttons label {
+  float: left;
+  font-size: 14px;
+  cursor: pointer;
+  width: 3%;
+  position: absolute;
+  top: 47%;
+  right: 0px;
+}
+
+input {
+  display: none;
+}
+
+#toggle:checked ~ label span#hide {
+  display: none;
+}
+
+#toggle:checked ~ label span#show {
+  display: block;
+}
+
+label span#show {
+  display: none;
+}
+
+#toggle:checked  ~ ol {
+  left: -500px;
+}
+
+.left ol {
+  position: relative;
+  left: 0;
+  transition: left 0.2s;
+}
+
+label {
+  position: absolute;
+  top: 47%;
+  right: 0;
+  cursor: pointer;
+}
+
+
+#unhide {
+  display: none;
+}
+
+.unhide,.hide {
+  font-size: 30px;
 }
 
 .clear {
@@ -131,8 +299,14 @@ a:focus {
   cursor: pointer;
 }
 
+.detail-teaser,.detail-body {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .detail-teaser {
-  margin-bottom: 35px;
+  margin-top: 35px;
+  position: relative;
 }
 
 .trouble-teaser:after {
@@ -159,7 +333,14 @@ a:focus {
   margin-bottom: 100px;
 }
 
+.detail-teaser-small > img {
+  width: 40%;
+  float: left;
+  margin-left: 4%;
+}
+
 .detail-body {
+  width: 60%;
   text-align: justify;
 }
 
@@ -176,7 +357,12 @@ a:focus {
 }
 
 .body-text {
+  margin-top: 100px;
   margin-bottom: 25px;
+}
+
+.body-text-continue {
+  margin: 25px 0 0 0;
 }
 
 .detail-body > div > h1 {
@@ -185,6 +371,7 @@ a:focus {
   font-size: 20px;
   text-align: center;
   padding-left: 0;
+  margin-top: 40px;
   margin-bottom: 3px;
   padding-top: 0;
 }
@@ -194,6 +381,7 @@ a:focus {
   font-family: "Inconsolata", monospace;
   font-size: 20px;
   padding-left: 0;
+  margin-top: 40px;
   margin-bottom: 3px;
   padding-top: 0;
 }
@@ -203,20 +391,16 @@ a:focus {
 }
 
 #vita {
-  max-width: 650px;
+  width: 80%;
   margin-bottom: 80px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #vita td {
   vertical-align: top;
-  text-align: justify;
 }
 
 #vita .td-left {
   width: 32%;
-  text-align: left;
 }
 
 #vita .last {
@@ -241,13 +425,27 @@ a:focus {
     width: 100%;
 }
 
-@media (max-width: 990px) {
-    .menu {
-        margin-bottom: 40px;
+@media screen and (max-width: 700px) {
+    .sample {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 12px;
+        width: 90%;
+        float: none;
     }
-
-   .sample 
-        margin-top: 0;
+    
+    .sample:first-child {
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .text {
+       float: none;
+       text-align: center;
+       width: 100%;
+       margin-top: 0;
+       margin-bottom: 45px;
     }
     
     h2 {
@@ -255,6 +453,11 @@ a:focus {
     }
     
     .detail-body {
+        width: 90%;
+    }
+    
+    #vita {
+        text-align: left;
         width: 90%;
     }
 }
