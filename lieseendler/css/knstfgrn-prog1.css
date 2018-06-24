@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "AR Bonnie";
+    src: url("/assets/fonts/arbonnie.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  background-color: #fedece; 
+  font-size: 14px;
+}
+
+.prog-lang {
+    height: 50px;
+}
+
+.menu {
+    position: absolute;
+    right: 50px;
+    top: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  -webkit-transition: color: 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.background {
+    margin-bottom: 30px;
+}
+
+#video {
+    margin: 0 auto -5px auto;
+    width: 100%;
+    height: 500px;
+}
+
+.prog-content {
+    margin-bottom: 50px;
+}
+
+.container a {
+  color: #000bad;
+  font-weight: 600;
+}
+
+.container a:focus {
+  text-decoration: none;
+  color: white;
+  outline: none;
+}
+
+.heritage:hover {
+    color: white;
+}
+
+.figuren-frame {
+    margin-top: 75px;
+}
+
+.figuren-thumb {
+    float: left;
+}
+
+.figuren-thumb:last-child {
+    margin-right: 0;
+}
+
+.figuren-thumb > img {
+    width: 100%;
+}
+
+.prog-content {
+    position: relative;
+    font-size: 20px;
+    text-align: left;
+}
+
+.prog-back {
+    text-align: center;
+    margin: 25px;
+}
+
+.active-lang {
+    color: white;
+}
+
+@media (max-width: 400px){
+    .background {
+        overflow: hidden;
+    }
+    
+    #video {
+        width: 160%;
+        margin-top: -30px;
+        margin-left: -120px
+    }
+}
+
+@media (max-width: 892px){
+    #video {
+        height: auto;
+    }
+}

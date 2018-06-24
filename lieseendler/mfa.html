@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liese Endler | Download Media</title>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body style="background-color: #ffeee6;">
+    <div class="content">
+        <div class="float-area">
+            <a download="LieseEndler_KNSTFGRN_Video.mp4" href="/assets/LieseEndler_KNSTFGRN_Video.mp4">
+                <div class="movie moving">
+                    <img src="/img/movie1.gif">
+                </div>
+            </a>
+            <a download="LieseEndler_EncodingKunstfiguren_Theorie.pdf" href="/assets/LieseEndler_EncodingKunstfiguren_Theorie.pdf">
+                <div class="pdf moving">
+                    <img src="/img/pdf.png">
+                    <p class="dl-text-pdf">Download pdf</p>
+                </div>
+            </a>
+            <a href="/assets/LieseEndler_in_collaboration_with_FlorianTepelmann_WLAN_Sounds.zip">
+                <div class="sounds moving">
+                    <img src="/img/wifisound.jpg">
+                    <p class="dl-text-sounds">Download Sounds</p>
+                </div>
+            </a>
+            <!-- <a href="">
+                <div class="tumblrs moving">
+                    <img src="">
+                </div>
+            </a> -->
+            
+            <a href="https://knstfgrno1zero.tumblr.com/" target="_blank">
+                <div class="zero moving" draggable="true" id="zero">
+                </div>
+            </a>
+            </div>
+            <a href="https://knstfgrno2arcivist.tumblr.com/"target="_blank">
+                <div class="archivist moving" draggable="true" id="archivist">
+                </div>
+            </a>
+            <a href="https://knstfgrno3compiler.tumblr.com/" target="_blank">
+                <div class="compiler moving" draggable="true" id="compiler">
+                </div>
+            </a>
+            <a href="https://knstfgrno3troublemaker.tumblr.com/"target="_blank">
+                <div class="troublemaker moving" draggable="true" id="troublemaker">
+                </div>
+            </a>
+        </div>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function(){
+            animateMovie();
+            animatePdf();
+            animateSounds();
+            // animateTumblrs();
+            animateZero();
+            animateArchivist();
+            animateCompiler();
+            animateTroublemaker();
+        });
+        function makeNewPositionMovie(){
+            // Get viewport dimensions (remove the dimension of the div)
+            var h = $(window).height() - 270;
+            var w = $(window).width() - 480;
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+            return [nh,nw];
+        }
+        function makeNewPositionPdf(){
+            // Get viewport dimensions (remove the dimension of the div)
+            var h = $(window).height() - 247;
+            var w = $(window).width() - 350;
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+            return [nh,nw];
+        }
+        function makeNewPositionSounds(){
+            // Get viewport dimensions (remove the dimension of the div)
+            var h = $(window).height() - 250;
+            var w = $(window).width() - 250;
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+            return [nh,nw];
+        }
+        function makeNewPositionFigures(){
+            // Get viewport dimensions (remove the dimension of the div)
+            var h = $(window).height() - 90;
+            var w = $(window).width() - 90;
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+            return [nh,nw];
+        }
+        function animateMovie(){
+            var newq = makeNewPositionMovie();
+            var oldq = $('.movie').offset();
+            var speed = calcSpeedFast([oldq.top, oldq.left], newq);
+            var oldw = $('.movie').width();
+            var oldh = $('.movie').height();
+            $('.movie').animate({ top: newq[0], left: newq[1]}, speed, function(){
+              animateMovie();        
+            });
+        };
+        function animatePdf(){
+            var newq = makeNewPositionPdf();
+            var oldq = $('.pdf').offset();
+            var speed = calcSpeedFast([oldq.top, oldq.left], newq);
+            $('.pdf').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animatePdf();        
+            });
+        };
+        function animateSounds(){
+            var newq = makeNewPositionSounds();
+            var oldq = $('.sounds').offset();
+            var speed = calcSpeedFast([oldq.top, oldq.left], newq);
+            $('.sounds-hover').animate({ top: newq[0], left: newq[1] }, speed);
+            $('.sounds').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateSounds();        
+            });
+        };
+        /* function animateTumblrs(){
+            var newq = makeNewPosition();
+            var oldq = $('.tumblrs').offset();
+            var speed = calcSpeed([oldq.top, oldq.left], newq);
+            $('.tumblrs').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateTumblrs();        
+            });
+        }; */
+        function animateZero(){
+            var newq = makeNewPositionFigures();
+            var oldq = $('.zero').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.zero').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateZero();        
+            });
+        };
+        function animateArchivist(){
+            var newq = makeNewPositionFigures();
+            var oldq = $('.archivist').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.archivist').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateArchivist();        
+            });
+        };
+        function animateCompiler(){
+            var newq = makeNewPositionFigures();
+            var oldq = $('.compiler').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.compiler').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateCompiler();        
+            });
+        };
+        function animateTroublemaker(){
+            var newq = makeNewPositionFigures();
+            var oldq = $('.troublemaker').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.troublemaker').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateTroublemaker();        
+            });
+        };
+        function calcSpeedSlow(prev, next) {
+            var x = Math.abs(prev[1] - next[1]);
+            var y = Math.abs(prev[0] - next[0]);
+            var greatest = x > y ? x : y;
+            var speedModifier = 0.01;
+            var speed = Math.ceil(greatest/speedModifier);
+            return speed;
+        }
+        function calcSpeedFast(prev, next) {
+            var x = Math.abs(prev[1] - next[1]);
+            var y = Math.abs(prev[0] - next[0]);
+            var greatest = x > y ? x : y;
+            var speedModifier = 0.02;
+            var speed = Math.ceil(greatest/speedModifier);
+            return speed;
+        }
+
+        
+</script>
+</body>
+</html>

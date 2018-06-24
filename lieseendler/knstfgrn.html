@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liese Endler | Encoding KNSTFGRN</title>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/css/knstfgrn.css">
+    
+</head>
+<body style="background-color: #ffeee6;">
+    <div class="content">
+        <div class="float-area">
+            <a href="https://knstfgrno1zero.tumblr.com/" target="_blank">
+                <div class="zero moving" draggable="true" id="zero">
+                </div>
+            </a>
+            </div>
+            <a href="https://knstfgrno2arcivist.tumblr.com/"target="_blank">
+                <div class="archivist moving" draggable="true" id="archivist">
+                </div>
+            </a>
+            <a href="https://knstfgrno3compiler.tumblr.com/" target="_blank">
+                <div class="compiler moving" draggable="true" id="compiler">
+                </div>
+            </a>
+            <a href="https://knstfgrno3troublemaker.tumblr.com/"target="_blank">
+                <div class="troublemaker moving" draggable="true" id="troublemaker">
+                </div>
+            </a>
+            <a href="prog-zero.html">
+                <div class="crop-zero moving" draggable="true" id="crop-zero">
+                   <img src="/img/0_freigestellt.png">
+                </div>
+            </a>
+            <a href="prog-archivist.html">
+                <div class="crop-archivist moving" draggable="true" id="crop-archivist">
+                    <img src="/img/1_freigestellt.png">
+                </div>
+            </a>
+            <a href="prog-compiler.html">
+                <div class="crop-compiler moving" draggable="true" id="crop-compiler">
+                    <img src="/img/2_freigestellt.png">
+                </div>
+            </a>
+            <a href="prog-troublemaker.html">
+                <div class="crop-troublemaker moving" draggable="true" id="crop-troublemaker">
+                    <img src="/img/3_freigestellt1.png">
+                </div>
+            </a>
+        </div>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function(){
+            animateZero();
+            animateArchivist();
+            animateCompiler();
+            animateTroublemaker();
+            animateCropZero();
+            animateCropArchivist();
+            animateCropCompiler();
+            animateCropTroublemaker();
+        });
+        function makeNewPositionFigures(){
+            var h = $(window).height() - 50;
+            var w = $(window).width() - 50;
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+            return [nh,nw];
+        }
+        function makeNewPositionZero() {
+            var h = $(window).height() / 2 - 268;
+            var w = $(window).width() / 2 - 105;
+            var nh = Math.floor(Math.random() * h) + $(window).height() / 2;
+            var nw = Math.floor(Math.random() * w);
+            return [nh,nw];
+        }
+        function makeNewPositionArchivist() {
+            var h = $(window).height() / 2 - 276;
+            var w = $(window).width() / 2 - 160;
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w) + $(window).width() / 2;
+            return [nh,nw];
+        }
+        function makeNewPositionCompiler() {
+            var h = $(window).height() / 2 - 300;
+            var w = $(window).width() / 2 - 349;
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+            return [nh,nw];
+        }
+        function makeNewPositionTroublemaker() {
+            var h = $(window).height() / 2 - 335;
+            var w = $(window).width() / 2 - 460;
+            var nh = Math.floor(Math.random() * h) + $(window).height() / 2;
+            var nw = Math.floor(Math.random() * w) + $(window).width() / 2;
+            return [nh,nw];
+        }
+        function animateZero(){
+            var newq = makeNewPositionFigures();
+            var oldq = $('.zero').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.zero').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateZero();        
+            });
+        };
+        function animateArchivist(){
+            var newq = makeNewPositionFigures();
+            var oldq = $('.archivist').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.archivist').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateArchivist();        
+            });
+        };
+        function animateCompiler(){
+            var newq = makeNewPositionFigures();
+            var oldq = $('.compiler').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.compiler').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateCompiler();        
+            });
+        };
+        function animateTroublemaker(){
+            var newq = makeNewPositionFigures();
+            var oldq = $('.troublemaker').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.troublemaker').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateTroublemaker();        
+            });
+        };
+        function animateCropZero(){
+            var newq = makeNewPositionZero();
+            var oldq = $('.crop-zero').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.crop-zero').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateCropZero();        
+            });
+        };
+        function animateCropArchivist(){
+            var newq = makeNewPositionArchivist();
+            var oldq = $('.crop-archivist').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.crop-archivist').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateCropArchivist();        
+            });
+        };
+        function animateCropCompiler(){
+            var newq = makeNewPositionCompiler();
+            var oldq = $('.crop-compiler').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.crop-compiler').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateCropCompiler();        
+            });
+        };
+        function animateCropTroublemaker(){
+            var newq = makeNewPositionTroublemaker();
+            var oldq = $('.crop-troublemaker').offset();
+            var speed = calcSpeedSlow([oldq.top, oldq.left], newq);
+            $('.crop-troublemaker').animate({ top: newq[0], left: newq[1] }, speed, function(){
+              animateCropTroublemaker();        
+            });
+        };
+        function calcSpeedSlow(prev, next) {
+            var x = Math.abs(prev[1] - next[1]);
+            var y = Math.abs(prev[0] - next[0]);
+            var greatest = x > y ? x : y;
+            var speedModifier = 0.01;
+            var speed = Math.ceil(greatest/speedModifier);
+            return speed;
+        }
+        function calcSpeedFast(prev, next) {
+            var x = Math.abs(prev[1] - next[3]);
+            var y = Math.abs(prev[0] - next[2]);
+            var greatest = x > y ? x : y;
+            var speedModifier = 0.03;
+            var speed = Math.ceil(greatest/speedModifier);
+            return speed;
+        }
+
+        
+</script>
+</body>
+</html>

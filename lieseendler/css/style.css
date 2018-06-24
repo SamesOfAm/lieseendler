@@ -1,13 +1,7 @@
-/* @font-face {
-  font-family: 'dejavu_sansbook';
-  src: url('http://www.lieseendler.com/DejaVuSans-webfont.eot');
-  src: url('http://www.lieseendler.com/DejaVuSans-webfont.eot?iefix') format('embedded-opentype'),
-  url('http://www.lieseendler.com/DejaVuSans-webfont.woff') format('woff'),
-  url('http://www.lieseendler.com/DejaVuSans-webfont.ttf') format('truetype'),
-  url('http://www.lieseendler.com/DejaVuSans-webfont.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-} */
+@font-face {
+    font-family: "AR Bonnie";
+    src: url("/../assets/fonts/arbonnie.ttf");
+}
 
 body {
   margin: 0;
@@ -90,7 +84,7 @@ a:focus {
 }
 
 .sample {
-    margin-bottom: 50px;
+    margin-bottom: 140px;
 }
 
 .sample > img {
@@ -131,19 +125,17 @@ a:focus {
   cursor: pointer;
 }
 
-.detail-teaser {
-  margin-bottom: 35px;
-}
-
 .trouble-teaser:after {
     content:'\A';
     position:absolute;
-    width:100%; height:100%;
-    top:0; left:0;
+    width:96%; 
+    height:100%;
+    top:0; left:2%;
     background:rgba(0,0,0,0.6);
     opacity:0;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+    z-index: -1;
 }
 
 .trouble-teaser:hover:after {
@@ -151,12 +143,24 @@ a:focus {
     cursor: pointer;
 }
 
-.detail-teaser > img {
+.detail-teaser-group > .detail-teaser {
+    margin-top: 35px;
+}
+
+.detail-teaser img {
   width: 100%;
 }
 
-.detail-teaser-group {
+.detail-teaser-group:last-child {
   margin-bottom: 100px;
+}
+
+.detail-teaser-group > p {
+  margin-bottom: 35px;
+}
+
+.detail-teaser-group img {
+    width: 100%;
 }
 
 .detail-body {
@@ -177,7 +181,13 @@ a:focus {
 
 .body-text {
   margin-bottom: 25px;
+  margin-top: 15px;
 }
+
+.text-list {
+    margin-top: 55px;
+    margin-bottom: 15px;
+}   
 
 .detail-body > div > h1 {
   color: rgba(153,255,204,1);
@@ -196,10 +206,6 @@ a:focus {
   padding-left: 0;
   margin-bottom: 3px;
   padding-top: 0;
-}
-
-.vimeo {
-  margin-top: 40px;
 }
 
 #vita {
@@ -229,8 +235,6 @@ a:focus {
 
 .figuren-thumb {
     float: left;
-    width: 200px;
-    margin-right: 70px;
 }
 
 .figuren-thumb:last-child {
@@ -241,13 +245,206 @@ a:focus {
     width: 100%;
 }
 
-@media (max-width: 990px) {
+.zero, .archivist, .compiler, .troublemaker {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+}
+
+.zero {
+    /* background-color: #c7b0c4; */
+    background-image: url('/img/silver3.png');
+    background-size: cover;  
+    top: 80%;
+    left: 5%;
+    border-radius: 90px;
+}
+
+.archivist {
+    top: 10%;
+    left: 85%;
+    height: 1px;
+}
+
+.archivist:before {
+    content: '';
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid #000bad;
+}
+
+.compiler {
+    background-image: url('/img/gold.jpg');
+    background-size: cover;
+    top: 55%;
+    left: 75%;
+}
+
+.troublemaker {
+    background-color: #f366a5; /* #f683bc; #ff99ae; */
+    top: 65%;
+    left: 30%;
+    transform: rotate(45deg);
+    width: 70px;
+    height: 70px;
+}
+
+.crop-archivist {
+    top: 20%;
+    left: 80%;
+}
+
+.crop-compiler {
+
+}
+
+.float-area a {
+    color: black;
+}
+
+.float-area a:hover {
+    color: black;
+}
+
+.moving {
+    position: absolute;
+}
+
+.movie {
+    top: 12%;
+    left: 40%;
+    width: 480px;
+    height: 270px;
+    background-color: black;
+    z-index: 4;
+}
+
+.pdf {
+    top: 20%;
+    left: 10%;
+    width: 350px;
+    height: 247px;
+    background-color: white;
+    z-index: 3;
+}
+
+.pdf img {
+    width: 100%;
+}
+
+.dl-text-pdf {
+    font-family: 'AR Bonnie';
+    position: absolute;
+    top: 180px;
+    left: 10px;
+    font-size: 22px;
+}
+
+.dl-text-sounds {
+    font-family: 'AR Bonnie';
+    position: absolute;
+    top: 195px;
+    right: 5px;
+    font-size: 18px;
+}
+
+.sounds {
+    top: 60%;
+    left: 45%;
+    width: 250px;
+    height: 250px;
+    z-index: 2;
+}
+
+.sounds-hover:hover {
+    display: block;
+}
+
+.sounds img {
+    width: 100%;
+}
+
+.credits-index {
+    font-size: 10px;
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.credits-mfa {
+    font-size: 10px;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+}
+
+.zeiss-teaser {
+    font-size: 20px;
+    text-align: center;
+}
+
+.prog-content {
+    position: relative;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.prog-lang {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.prog-back {
+    text-align: center;
+    margin: 25px;
+}
+
+.active-lang {
+    color: white;
+}
+
+.miepion {
+    width: 300px;
+    margin: 50px auto;
+    text-align: left;
+}
+
+.miepion h1 {
+    text-align: center;
+}
+
+.images img {
+    width: 100px;
+    text-align: center;
+}
+
+.miepion p {
+    
+}
+
+.images {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.inline {
+    height: .9em;
+    width: 13px;
+}
+
+.images > div {
+    float: left;
+}
+
+@media screen and (max-width: 990px) {
     .menu {
         margin-bottom: 40px;
     }
 
-   .sample 
+   .sample {
         margin-top: 0;
+        margin-bottom: 50px;
     }
     
     h2 {

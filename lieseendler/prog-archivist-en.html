@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liese Endler</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet"> 
+    <link type ='text/css' rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel="icon" type="image/ico" href="assets/img/favicon3.ico">
+    <link href='https://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='css/knstfgrn-prog.css'/>
+</head>
+<body>
+    <div class="prog-lang">
+        <div class="menu">
+            <a href="prog-archivist.html">DE</a>  |  <a class="active-lang" href="#">EN</a>
+        </div>
+    </div>
+    <div class="image">
+        <img src="img/video-still_archivist_small.png">
+    </div>
+    <div class="background">
+        <video id="video" autoplay loop muted>
+            <source src="assets/archivist.mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        <div class="row prog-content">
+            <div class="prog-main col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                    
+                <p>
+                    <strong>HERITAGE &amp; UPDATE_</strong>Based on the figure <a class="heritage" href="http://lieseendler.com/pages/works/archivist" target="_blank">The Archivist</a>, KNSTFGR_1 appears as a grey and masked figure, scanning and archiving Everything. KNSTFGR_1 represents the endless collecting, categorizing and interlinking of data which plays an important role in a society based on flow of information. The panoptic gaze of the figure is made face-less by the mask but the constant flow of information that surrounds it is made audible.
+                </p>
+                <p>
+                    <strong>COSTUME_</strong>The costume consist of a grey cotton overall, a silver mirror mask and one white glove. A device that is hidden in the costume transforms WiFi-waves into sound and makes them audible through a bluetooth speaker attached to the costume.<br><br>
+                </p>
+                <p><strong>COMMANDS</strong><br>
+                    <strong>function run_1()</strong><br>
+                    {If the program starts, KNSTFGR_1 runs static, rigid, precise and in normal speed. A change of direction is only possible within a 45° or 90° angle;}<br><br>
+                    <strong>function scanEnvironment()</strong><br>
+                    {If KNSTFGR_1 stops and has a good view on the environment, the scanning process begins; turning the head slowly from left to right and back. If KNSTFGR_1 senses an interaction of two or more objects in the environment scanObject() is executed;}<br><br>
+                    <strong>function scanObject()</strong><br>
+                    {If KNSTFGR_1 scans an object , the head is fixed into the direction of the object. The head slowly tends down than up and down again to stop in the middle; consequently storeFile() is executed;}<br><br>
+                    <strong>function storeFile()</strong><br>
+                    {If KNSTFGR_1 is finished to execute scanObject() the interaction is framed with a gesture of the hands and a picture is taken; the picture is stored in the archive; consequently run_1() is executed;}
+                </p>
+                <p>
+                    <a class="heritage" href="knstfgrn.html">View other Figures ></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
